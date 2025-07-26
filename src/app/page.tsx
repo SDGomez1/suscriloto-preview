@@ -1,103 +1,92 @@
+"use client";
+import logo from "@/assets/img/logo.png";
+import boyaca from "@/assets/img/boyaca.png";
+import cundinamarca from "@/assets/img/cundinamarca.png";
+import huila from "@/assets/img/huila.png";
+import mainzales from "@/assets/img/mainzales.png";
+import medellin from "@/assets/img/medellin.png";
+import risaralda from "@/assets/img/risaralda.png";
+import santander from "@/assets/img/santander.png";
+import tolima from "@/assets/img/tolima.png";
+import valle from "@/assets/img/valle.png";
+import construction from "@/assets/img/construction.webp";
 import Image from "next/image";
-
+import { useState } from "react";
 export default function Home() {
+  const images = [
+    { name: "cundinamarca", src: cundinamarca },
+    { name: "boyaca", src: boyaca },
+    { name: "huila", src: huila },
+    { name: "mainzales", src: mainzales },
+    { name: "medellin", src: medellin },
+    { name: "risaralda", src: risaralda },
+    { name: "santander", src: santander },
+    { name: "tolima", src: tolima },
+    { name: "valle", src: valle },
+  ];
+  const [isSent, setIsSent] = useState(false);
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section className="bg-[#FED73E] min-h-svh  pt-4 2xl:pt-10 pb-4 2xl:pb-0">
+      <div className="px-4 flex flex-col items-center w-full 2xl:justify-center 2xl:h-full">
+        <div className="flex w-full flex-col items-center lg:flex-row lg:w-1/2 2xl:w-2/6">
+          <Image
+            src={logo}
+            alt="logo suscrilotto"
+            className="h-auto w-3/4 "
+          ></Image>
+          <Image
+            src={construction}
+            alt="en construccion"
+            className="h-auto w-1/2 2xl:w-2/6"
+          ></Image>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <h1 className="uppercase text-[#F20C39] font-bold text-4xl text-center 2xl:text-6xl">
+          ¡Estamos preparando algo increíble!
+        </h1>
+        <span className="block w-full h-1 bg-[#F20C39] my-4 max-w-[500px] 2xl:my-10"></span>
+        <h2 className="uppercase text-[#0C2964] font-bold text-4xl text-center mb-4 2xl:text-5xl 2xl:mb-10">
+          LOTERÍA POR <span className="font-black">SUSCRIPCIÓN</span>
+        </h2>
+        <p className="text-[#0C2964] text-2xl text-center font-bold mb-4 2xl:text-5xl">
+          Escoge tu número de la suerte y nosotros nos encargamos de todo.
+        </p>
+        <p className="text-[#0C2964] text-2xl text-center font-bold mb-4 2xl:text-5xl 2xl:mb-10">
+          Juega cada semana, sin filas y desde donde estés.
+        </p>
+        <div className="w-full bg-[#0D4AA3] p-4 rounded-2xl space-y-4 mb-4 lg:max-w-1/2 lg:p-10">
+          <h3 className="font-bold text-center text-white text-2xl 2xl:text-4xl">
+            Déjanos tu correo y sé el primero en enterarte del lanzamiento:
+          </h3>
+          <div className="flex flex-col gap-4 xl:flex-row">
+            <input
+              type="email"
+              placeholder="ejemplo@ejemplo.com"
+              className="border py-2 px-4 bg-white w-full rounded-lg disabled:bg-neutral-200 2xl:text-2xl"
+              disabled={isSent}
+            />
+            <button
+              className="text-lg text-white rounded-full bg-[#F20C39] font-bold w-full py-2 disabled:bg-neutral-400 2xl:text-2xl shadow-lg"
+              onClick={() => setIsSent(true)}
+              disabled={isSent}
+            >
+              {isSent ? "TE NOTIFICAREMOS" : "QUIERO SER DE LOS PRIMEROS"}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="h-24 bg-white w-full lg:w-10/12 lg:mx-auto lg:rounded-full 2xl:h-36 lg:shadow-xl 2xl:mt-10 ">
+        <div className="flex overflow-x-auto h-full space-x-2 p-2 lg:justify-center">
+          {images.map((image) => (
+            <div key={image.name} className="flex-none aspect-square h-full ">
+              <Image
+                src={image.src}
+                alt={image.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>{" "}
+    </section>
   );
 }
