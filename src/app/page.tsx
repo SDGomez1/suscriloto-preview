@@ -77,7 +77,7 @@ export default function Home() {
                 <input
                   type="email"
                   placeholder="ejemplo@ejemplo.com"
-                  className="py-2 px-4 bg-white w-full rounded-lg disabled:bg-neutral-200 2xl:text-2xl font-bahnschrift font-semibold"
+                  className="py-2 px-4 bg-white w-full rounded-lg disabled:bg-neutral-200 2xl:text-2xl font-bahnschrift font-semibold text-black"
                   disabled={isSent}
                   onChange={(value) => setEmail(value.target.value)}
                 />
